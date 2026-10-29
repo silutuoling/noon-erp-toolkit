@@ -1,0 +1,67 @@
+{
+  "name": "noon-erp-toolkit",
+  "version": "0.1.0",
+  "description": "Calculation modules and fee data for Noon sellers in UAE, Saudi Arabia and Egypt — commission tiers, FBN fees, VAT, pricing, profit, HS code structure, import duty. Zero dependencies; building blocks for a Noon ERP or listing tool.",
+  "type": "module",
+  "license": "MIT",
+  "author": "骆驼掌柜 (https://noonmate.com)",
+  "homepage": "https://noonmate.com/tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silutuoling/noon-erp-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/silutuoling/noon-erp-toolkit/issues"
+  },
+  "keywords": [
+    "noon",
+    "noon-erp",
+    "noon.com",
+    "noon marketplace",
+    "noon seller",
+    "noon saudi",
+    "noon uae",
+    "noon egypt",
+    "referral fee",
+    "fbn",
+    "vat",
+    "import duty",
+    "hs code",
+    "ecommerce",
+    "cross-border",
+    "erp",
+    "middle east"
+  ],
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./commission": "./src/commission.mjs",
+    "./profit": "./src/profit.mjs",
+    "./pricing": "./src/pricing.mjs",
+    "./vat": "./src/vat.mjs",
+    "./fx": "./src/fx.mjs",
+    "./volumetric": "./src/volumetric.mjs",
+    "./freight": "./src/freight.mjs",
+    "./hs-code": "./src/hs-code.mjs",
+    "./import-duty": "./src/import-duty.mjs",
+    "./title-check": "./src/title-check.mjs",
+    "./banned-words": "./src/banned-words.mjs",
+    "./sku-matrix": "./src/sku-matrix.mjs",
+    "./barcode": "./src/barcode.mjs",
+    "./data/*": "./data/*"
+  },
+  "files": [
+    "src",
+    "data",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node examples/demo.mjs",
+    "demo": "node examples/demo.mjs"
+  }
+}

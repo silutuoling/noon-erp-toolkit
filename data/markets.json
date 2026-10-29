@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/rates.ts",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/commission",
+    "disclaimer": "数据整理自 Noon 卖家帮助中心的公开服务附件，非官方发布物；以 Noon 官方页面为准。",
+    "fields": {
+      "vat": "标准增值税率（%）",
+      "minReferral": "最低佣金（站点币种）",
+      "storageMonthly": "月度仓储费 / 立方英尺，null 表示官方未列",
+      "longTerm": "长期仓储费 / 立方英尺 与起收天数",
+      "nonSaleable": "不可售仓储费 / 立方英尺",
+      "returnAdmin": "退货管理费 = min(cap, pct% × 佣金)"
+    }
+  },
+  "markets": {
+    "ae": {
+      "code": "ae",
+      "name": "阿联酋",
+      "currency": "AED",
+      "vat": 5,
+      "minReferral": 1,
+      "storageMonthly": 1.75,
+      "longTerm": {
+        "fee": 25,
+        "fromDays": 365
+      },
+      "nonSaleable": 12,
+      "returnAdmin": {
+        "cap": 15,
+        "pct": 20
+      },
+      "referralEffective": "2026-09-10",
+      "outboundEffective": "2026-09-10",
+      "storageEffective": "2026-10-01"
+    },
+    "sa": {
+      "code": "sa",
+      "name": "沙特",
+      "currency": "SAR",
+      "vat": 15,
+      "minReferral": 1,
+      "storageMonthly": 2.75,
+      "longTerm": {
+        "fee": 25,
+        "fromDays": 365
+      },
+      "nonSaleable": 12,
+      "returnAdmin": {
+        "cap": 15,
+        "pct": 20
+      },
+      "referralEffective": "2026-09-10",
+      "outboundEffective": "2026-09-10",
+      "storageEffective": "2026-10-01"
+    },
+    "eg": {
+      "code": "eg",
+      "name": "埃及",
+      "currency": "EGP",
+      "vat": 14,
+      "minReferral": 0,
+      "storageMonthly": null,
+      "longTerm": {
+        "fee": 35,
+        "fromDays": 180
+      },
+      "nonSaleable": 12,
+      "returnAdmin": {
+        "cap": 15,
+        "pct": 20
+      },
+      "referralEffective": "2026-02-01",
+      "outboundEffective": "2026-02-01",
+      "storageEffective": null
+    }
+  }
+}

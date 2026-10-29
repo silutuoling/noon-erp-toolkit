@@ -1,0 +1,1815 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/rates.ts",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/commission",
+    "disclaimer": "数据整理自 Noon 卖家帮助中心的公开服务附件，非官方发布物；以 Noon 官方页面为准。",
+    "critical_note": "费率是「边际阶梯」，不是整单单价。官方原文：N% for the portion of the total sales price up to X, M% for any portion greater than X。举例：珠宝卖 8000 = 5000×10% + 3000×5% = 650，不是 8000×5%=400。只存一个百分比的计算器在这里会全线算错。",
+    "vat_excluded": "所有费率均不含 VAT，需另行叠加（AE 5 / SA 15 / EG 14）。",
+    "known_gaps": [
+      "PST 与品牌专属费率未收录（官方放在单独 Excel 例外表），品牌卖家实际扣点可能更低",
+      "仅收录 FBN（Noon 履约），FBP（自发货）是另一套费率表，未收录"
+    ],
+    "tier_shape": "upto=null 表示该档无上限（最后一档）；rate 单位为 %"
+  },
+  "row_count": 70,
+  "rows": [
+    {
+      "id": "apparel",
+      "family": "时尚",
+      "label": "服饰 / 鞋靴",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 27
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 27
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "watches",
+      "family": "时尚",
+      "label": "手表",
+      "rates": {
+        "ae": [
+          {
+            "upto": 5000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": 5000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "eyewear",
+      "family": "时尚",
+      "label": "眼镜",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "jewelry-gold",
+      "family": "珠宝",
+      "label": "金条 / 金币",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "jewelry-silver",
+      "family": "珠宝",
+      "label": "银条",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "jewelry-fine",
+      "family": "珠宝",
+      "label": "精品珠宝",
+      "rates": {
+        "ae": [
+          {
+            "upto": 1000,
+            "rate": 16
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "eg": [
+          {
+            "upto": 5000,
+            "rate": 10
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "jewelry-other",
+      "family": "珠宝",
+      "label": "其他珠宝",
+      "rates": {
+        "ae": [
+          {
+            "upto": 1000,
+            "rate": 16
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "eg": [
+          {
+            "upto": 5000,
+            "rate": 19
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ]
+      },
+      "note": "AE / SA 官方表把 Fine Jewelry 与 Other Jewelry 两行合并显示，此处按同档处理，专营珠宝请对官方明细表再核一次"
+    },
+    {
+      "id": "luggage",
+      "family": "箱包",
+      "label": "旅行箱",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 20
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 20
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "bags",
+      "family": "箱包",
+      "label": "其他箱包",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 25
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 25
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-kitchen",
+      "family": "家居",
+      "label": "厨房与餐饮",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-bedding",
+      "family": "家居",
+      "label": "床品与卫浴",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-decor",
+      "family": "家居",
+      "label": "家居装饰",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-improve",
+      "family": "家居",
+      "label": "家装",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-garden",
+      "family": "家居",
+      "label": "园艺",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "furniture",
+      "family": "家居",
+      "label": "家具",
+      "rates": {
+        "ae": [
+          {
+            "upto": 750,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": 750,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "cleaning",
+      "family": "家居",
+      "label": "清洁与卫生",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 7.5
+          },
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "fragrance",
+      "family": "美妆个护",
+      "label": "香水",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "cosmetics",
+      "family": "美妆个护",
+      "label": "彩妆",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      },
+      "note": "沙特官方表按品牌分档：通用品牌 15%，其他品牌 10%；此处取通用品牌档"
+    },
+    {
+      "id": "hair-skin",
+      "family": "美妆个护",
+      "label": "头发与皮肤护理",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11.5
+          }
+        ]
+      },
+      "note": "沙特官方表按品牌分档：通用品牌 15%，其他品牌 ≤50 SAR 收 9%、>50 SAR 收 12.5%；此处取通用品牌档"
+    },
+    {
+      "id": "epc",
+      "family": "美妆个护",
+      "label": "电子个护",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      },
+      "note": "沙特官方表按品牌分档：通用品牌 15%，其他品牌 13%；此处取通用品牌档"
+    },
+    {
+      "id": "nutrition",
+      "family": "美妆个护",
+      "label": "健康营养",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": 50,
+            "rate": 8.5
+          },
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "tv",
+      "family": "数码电子",
+      "label": "电视",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "projector",
+      "family": "数码电子",
+      "label": "投影仪 / 流媒体设备",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "av-player",
+      "family": "数码电子",
+      "label": "音视频播放器与配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "tv-acc",
+      "family": "数码电子",
+      "label": "电视配件 / 麦克风",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobiles",
+      "family": "数码电子",
+      "label": "手机 / 平板 / 电纸书",
+      "rates": {
+        "ae": [
+          {
+            "upto": 500,
+            "rate": 6
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": 750,
+            "rate": 5
+          },
+          {
+            "upto": null,
+            "rate": 4.5
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 3.5
+          }
+        ]
+      },
+      "note": "埃及官方给 3.5–4% 区间，此处取 3.5%"
+    },
+    {
+      "id": "sim",
+      "family": "数码电子",
+      "label": "电话卡",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 4
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "stylus",
+      "family": "数码电子",
+      "label": "触控笔",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobile-acc",
+      "family": "数码电子",
+      "label": "手机配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": 50,
+            "rate": 20
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      },
+      "note": "AE 官方表按品牌分档：头部品牌 15%、其他品牌 20%；此处取头部品牌档"
+    },
+    {
+      "id": "laptop",
+      "family": "数码电子",
+      "label": "笔记本 / 台式机",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "memory-card",
+      "family": "数码电子",
+      "label": "存储卡 / U 盘",
+      "rates": {
+        "ae": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "sa": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ssd",
+      "family": "数码电子",
+      "label": "其他存储设备（SSD / 硬盘）",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "networking",
+      "family": "数码电子",
+      "label": "网络配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "monitor",
+      "family": "数码电子",
+      "label": "显示器 / 显卡",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "computer-hw",
+      "family": "数码电子",
+      "label": "其他电脑硬件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "computer-acc",
+      "family": "数码电子",
+      "label": "其他电脑配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "software",
+      "family": "数码电子",
+      "label": "软件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "laptop-bag",
+      "family": "数码电子",
+      "label": "笔记本包 / 内胆",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "printer",
+      "family": "数码电子",
+      "label": "打印机 / 扫描仪",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "cartridge",
+      "family": "数码电子",
+      "label": "墨盒 / 碳粉",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "office-other",
+      "family": "数码电子",
+      "label": "其他办公电子",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "headphones",
+      "family": "数码电子",
+      "label": "耳机",
+      "rates": {
+        "ae": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 20
+          }
+        ],
+        "eg": [
+          {
+            "upto": 1000,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "speaker",
+      "family": "数码电子",
+      "label": "音箱",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "vr",
+      "family": "数码电子",
+      "label": "VR / AR 眼镜",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 7.5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "smartwatch",
+      "family": "数码电子",
+      "label": "智能手表 / 手环 / 戒指",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 7
+          }
+        ]
+      },
+      "note": "埃及官方给 6–8% 区间，此处取 7%"
+    },
+    {
+      "id": "wearable-acc",
+      "family": "数码电子",
+      "label": "穿戴配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "family": "数码电子",
+      "label": "相机 / 镜头",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "sa": [
+          {
+            "upto": 250,
+            "rate": 10
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera-acc",
+      "family": "数码电子",
+      "label": "相机配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ],
+        "sa": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "large-appliance",
+      "family": "家电",
+      "label": "大家电",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": 250,
+            "rate": 12
+          },
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-appliance",
+      "family": "家电",
+      "label": "小家电",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 6.5
+          }
+        ]
+      },
+      "note": "沙特官方表：微波炉 / 取暖器 12%，其余头部品牌 10%、其他品牌 15%；此处取头部品牌档"
+    },
+    {
+      "id": "console",
+      "family": "游戏",
+      "label": "游戏主机",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 3.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "game",
+      "family": "游戏",
+      "label": "游戏软件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "giftcard",
+      "family": "游戏",
+      "label": "礼品卡",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "game-acc",
+      "family": "游戏",
+      "label": "游戏配件",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "book",
+      "family": "图书音像",
+      "label": "图书",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "music",
+      "family": "图书音像",
+      "label": "音乐",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "video",
+      "family": "图书音像",
+      "label": "影像",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "baby",
+      "family": "母婴玩具",
+      "label": "母婴用品",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "toys",
+      "family": "母婴玩具",
+      "label": "玩具",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "pet-furniture",
+      "family": "宠物",
+      "label": "宠物家具",
+      "rates": {
+        "ae": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": 50,
+            "rate": 8
+          },
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "pet-toys",
+      "family": "宠物",
+      "label": "宠物玩具",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "pet-other",
+      "family": "宠物",
+      "label": "宠物其他（含主粮与用品）",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "auto-av",
+      "family": "汽车",
+      "label": "车载影音",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 7
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 7
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "vehicle",
+      "family": "汽车",
+      "label": "整车",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "tyre",
+      "family": "汽车",
+      "label": "轮胎 / 车库设备",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 6
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      },
+      "note": "AE 表标注 2026-01-01 起生效"
+    },
+    {
+      "id": "auto-other",
+      "family": "汽车",
+      "label": "其他汽车用品",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 12
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "family": "其他",
+      "label": "食品与饮料",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ],
+        "eg": [
+          {
+            "upto": 250,
+            "rate": 15
+          },
+          {
+            "upto": null,
+            "rate": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "sports",
+      "family": "其他",
+      "label": "运动户外",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      },
+      "note": "AE 官方表：户外专项 15%、其他运动 14%；此处取户外档，细分见例外表"
+    },
+    {
+      "id": "stationery",
+      "family": "其他",
+      "label": "文具与办公用品",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 15
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "other-all",
+      "family": "其他",
+      "label": "其他类别",
+      "rates": {
+        "ae": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "sa": [
+          {
+            "upto": null,
+            "rate": 14
+          }
+        ],
+        "eg": [
+          {
+            "upto": null,
+            "rate": 10
+          }
+        ]
+      }
+    }
+  ]
+}

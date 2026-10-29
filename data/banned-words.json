@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/BannedCheck.tsx",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/banned",
+    "disclaimer": "词库为公开常见风险表述的整理，不构成合规判定。平台政策随时变化，命中不代表一定违规，未命中也不代表一定合规。以 Noon 官方商品政策为准。",
+    "matching": "不区分大小写的子串匹配（includes），命中即列为风险",
+    "extensible": "实际使用建议在本地追加自己的历史被打回词"
+  },
+  "group_count": 4,
+  "word_count": 61,
+  "groups": [
+    {
+      "key": "absolute",
+      "label": "绝对化用语",
+      "level": "high",
+      "tip": "平台普遍不接受绝对化宣称，容易判虚假宣传，直接删或改成客观描述。",
+      "words": [
+        "best",
+        "best seller",
+        "cheapest",
+        "number one",
+        "no.1",
+        "#1",
+        "top rated",
+        "perfect",
+        "100%",
+        "guaranteed",
+        "world class",
+        "最好",
+        "最佳",
+        "第一",
+        "顶级",
+        "唯一",
+        "最便宜",
+        "全网最低"
+      ]
+    },
+    {
+      "key": "medical",
+      "label": "医疗功效宣称",
+      "level": "high",
+      "tip": "非医疗器械不得宣称治疗、杀菌率、减肥等效果，跨境审核尤其严格。",
+      "words": [
+        "cure",
+        "treat disease",
+        "heal",
+        "anti-bacterial 99.9",
+        "kills 99.9",
+        "fda approved",
+        "clinically proven",
+        "weight loss",
+        "治疗",
+        "治愈",
+        "杀菌率",
+        "抗癌",
+        "减肥",
+        "无副作用"
+      ]
+    },
+    {
+      "key": "counterfeit",
+      "label": "仿冒相关表述",
+      "level": "high",
+      "tip": "这类词等于自认非正品，属于平台零容忍项，出现即需删除。",
+      "words": [
+        "replica",
+        "knockoff",
+        "knock-off",
+        "dupe",
+        "1:1",
+        "copy of",
+        "a货",
+        "高仿",
+        "原单",
+        "尾单",
+        "复刻",
+        "仿品"
+      ]
+    },
+    {
+      "key": "brand",
+      "label": "疑似品牌词（仅提示）",
+      "level": "mid",
+      "tip": "出现品牌名不代表违规：兼容性描述（for iPhone）通常可用，但暗示官方出品或使用品牌 logo 有风险，请确认授权口径。",
+      "words": [
+        "apple",
+        "iphone",
+        "samsung",
+        "sony",
+        "nike",
+        "adidas",
+        "dyson",
+        "philips",
+        "chanel",
+        "dior",
+        "gucci",
+        "louis vuitton",
+        "rolex",
+        "disney",
+        "marvel",
+        "hello kitty",
+        "barbie"
+      ]
+    }
+  ]
+}

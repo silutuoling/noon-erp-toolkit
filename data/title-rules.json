@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/TitleCheck.tsx",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/title",
+    "disclaimer": "数据整理自 Noon 卖家帮助中心的公开服务附件，非官方发布物；以 Noon 官方页面为准。",
+    "scope": {
+      "does": "检查标题的字符数、语言、符号、促销词、堆砌等 12 类问题并给评分"
+    },
+    "scoring": "起始 100 分；high 每条 −18，mid −8，low −3；≥85 基本合规，≥70 可优化，其余建议重写",
+    "char_limit_note": "字符上限官方按类目不同（常见 100–150），工具里是用户可调参数，默认 100，最小 10"
+  },
+  "default_char_limit": 100,
+  "promo_words": [
+    "free shipping",
+    "best seller",
+    "bestseller",
+    "best price",
+    "cheapest",
+    "number one",
+    "no.1",
+    "#1",
+    "top rated",
+    "100%",
+    "sale",
+    "discount",
+    "hot sale",
+    "new arrival",
+    "guarantee",
+    "must have"
+  ],
+  "checks": [
+    {
+      "id": "length-over",
+      "level": "high",
+      "rule": "字符数 > 上限",
+      "detail": "后台可能截断或拒收"
+    },
+    {
+      "id": "length-near",
+      "level": "mid",
+      "rule": "字符数 > 上限 × 95%",
+      "detail": "建议留 5–10 字符余量"
+    },
+    {
+      "id": "length-short",
+      "level": "mid",
+      "rule": "字符数 < 25",
+      "detail": "信息量不足，补品牌/材质/规格/场景"
+    },
+    {
+      "id": "word-count",
+      "level": "high",
+      "rule": "词数 < 4",
+      "detail": "要说清「是什么 + 什么规格 + 给谁用」"
+    },
+    {
+      "id": "chinese",
+      "level": "high",
+      "rule": "含中文字符",
+      "detail": "Noon 前台标题为英文，中文会被打回"
+    },
+    {
+      "id": "emoji",
+      "level": "mid",
+      "rule": "含 emoji 或符号图形",
+      "detail": "会被判低质"
+    },
+    {
+      "id": "promo",
+      "level": "high",
+      "rule": "含促销/绝对化表述",
+      "detail": "见 promo_words"
+    },
+    {
+      "id": "symbols",
+      "level": "mid",
+      "rule": "含装饰性符号",
+      "detail": "用逗号、连字符即可"
+    },
+    {
+      "id": "uppercase",
+      "level": "mid",
+      "rule": "≥2 个全大写单词（长度>2）",
+      "detail": "除型号与缩写外不要整段大写"
+    },
+    {
+      "id": "repeat-word",
+      "level": "mid",
+      "rule": "同一关键词出现 ≥3 次",
+      "detail": "属于堆砌，删到一两次"
+    },
+    {
+      "id": "repeat-adjacent",
+      "level": "mid",
+      "rule": "相邻单词重复（如 \"bag bag\"）",
+      "detail": "复制粘贴痕迹"
+    },
+    {
+      "id": "trailing-dot",
+      "level": "low",
+      "rule": "结尾带句号",
+      "detail": "标题不加句号"
+    },
+    {
+      "id": "lower-start",
+      "level": "low",
+      "rule": "多数单词小写开头",
+      "detail": "建议 Title Case"
+    },
+    {
+      "id": "comma-stuffing",
+      "level": "mid",
+      "rule": "逗号 ≥4 且词数 ≤8",
+      "detail": "像关键词列表，不像商品名"
+    }
+  ]
+}

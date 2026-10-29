@@ -1,0 +1,530 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/rates.ts",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/commission",
+    "disclaimer": "数据整理自 Noon 卖家帮助中心的公开服务附件，非官方发布物；以 Noon 官方页面为准。",
+    "critical_note": "AE / SA 按售价（ASP）分两档：a = ASP ≤ 25 的价格，b = ASP > 25 的价格；EG 只有单一价（用 a）。",
+    "field_note": {
+      "size": "尺寸档",
+      "maxKg": "该档重量上限 kg，null 表示无上限",
+      "a": "金额（AE/SA 为 ASP≤25；EG 为唯一价）",
+      "b": "AE/SA 的 ASP>25 价格",
+      "perKg": "超出上限后每多 1kg 加价",
+      "perKgTill": "加价截止到多少 kg"
+    },
+    "currency": "AED / SAR / EGP，均为站点本币，不含 VAT"
+  },
+  "outbound": {
+    "ae": {
+      "aspSplit": true,
+      "rows": [
+        {
+          "size": "小信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 5.5,
+          "b": 7.5
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.1 kg",
+          "maxKg": 0.1,
+          "a": 6,
+          "b": 8
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 6.2,
+          "b": 8.2
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 6.5,
+          "b": 8.5
+        },
+        {
+          "size": "大信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 7,
+          "b": 9
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 7.2,
+          "b": 9.2
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 7.5,
+          "b": 9.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 8.5,
+          "b": 10.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.5 kg",
+          "maxKg": 1.5,
+          "a": 9,
+          "b": 11
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 9.5,
+          "b": 11.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 10.5,
+          "b": 12.5,
+          "perKg": 1,
+          "perKgTill": 12
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 10.5,
+          "b": 12.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 11.5,
+          "b": 13.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 12.5,
+          "b": 14.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 4.0 kg",
+          "maxKg": 4,
+          "a": 13.5,
+          "b": 15.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 5.0 kg",
+          "maxKg": 5,
+          "a": 14.5,
+          "b": 16.5,
+          "perKg": 1,
+          "perKgTill": 10
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 15 kg",
+          "maxKg": 15,
+          "a": 24.5,
+          "b": 26.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 20 kg",
+          "maxKg": 20,
+          "a": 29.5,
+          "b": 31.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 25 kg",
+          "maxKg": 25,
+          "a": 34.5,
+          "b": 36.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 30 kg",
+          "maxKg": 30,
+          "a": 39.5,
+          "b": 41.5,
+          "perKg": 1
+        }
+      ]
+    },
+    "sa": {
+      "aspSplit": true,
+      "rows": [
+        {
+          "size": "小信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 5.5,
+          "b": 7.5
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.1 kg",
+          "maxKg": 0.1,
+          "a": 6,
+          "b": 8
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 6.2,
+          "b": 8.2
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 6.5,
+          "b": 8.5
+        },
+        {
+          "size": "大信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 7,
+          "b": 9
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 7.2,
+          "b": 9.2
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 7.5,
+          "b": 9.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 8,
+          "b": 10
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.5 kg",
+          "maxKg": 1.5,
+          "a": 8.5,
+          "b": 11.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 9,
+          "b": 12
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 10,
+          "b": 13,
+          "perKg": 1,
+          "perKgTill": 12
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 10,
+          "b": 14
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 11,
+          "b": 15
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 12,
+          "b": 16
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 4.0 kg",
+          "maxKg": 4,
+          "a": 13,
+          "b": 17
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 5.0 kg",
+          "maxKg": 5,
+          "a": 14,
+          "b": 18,
+          "perKg": 1,
+          "perKgTill": 10
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 15 kg",
+          "maxKg": 15,
+          "a": 24,
+          "b": 28
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 20 kg",
+          "maxKg": 20,
+          "a": 29,
+          "b": 33
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 25 kg",
+          "maxKg": 25,
+          "a": 34,
+          "b": 38
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 30 kg",
+          "maxKg": 30,
+          "a": 39,
+          "b": 43,
+          "perKg": 1
+        }
+      ]
+    },
+    "eg": {
+      "aspSplit": false,
+      "rows": [
+        {
+          "size": "小信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 19
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.1 kg",
+          "maxKg": 0.1,
+          "a": 19
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 19
+        },
+        {
+          "size": "标准信封",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 20
+        },
+        {
+          "size": "大信封",
+          "label": "统一费率",
+          "maxKg": null,
+          "a": 20.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.25 kg",
+          "maxKg": 0.25,
+          "a": 19
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 0.5 kg",
+          "maxKg": 0.5,
+          "a": 20
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 20.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 1.5 kg",
+          "maxKg": 1.5,
+          "a": 21.5
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 22
+        },
+        {
+          "size": "标准包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 23,
+          "perKg": 1,
+          "perKgTill": 12
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 1.0 kg",
+          "maxKg": 1,
+          "a": 24.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 2.0 kg",
+          "maxKg": 2,
+          "a": 26.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 3.0 kg",
+          "maxKg": 3,
+          "a": 28.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 4.0 kg",
+          "maxKg": 4,
+          "a": 30.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 5.0 kg",
+          "maxKg": 5,
+          "a": 32.5,
+          "perKg": 2,
+          "perKgTill": 10
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 15 kg",
+          "maxKg": 15,
+          "a": 52.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 20 kg",
+          "maxKg": 20,
+          "a": 62.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 25 kg",
+          "maxKg": 25,
+          "a": 72.5
+        },
+        {
+          "size": "超大包裹",
+          "label": "≤ 30 kg",
+          "maxKg": 30,
+          "a": 82.5
+        },
+        {
+          "size": "特超大",
+          "label": "≤ 1 kg",
+          "maxKg": 1,
+          "a": 26.5,
+          "perKg": 2,
+          "perKgTill": 10
+        },
+        {
+          "size": "特超大",
+          "label": "≤ 15 kg",
+          "maxKg": 15,
+          "a": 54.5
+        },
+        {
+          "size": "特超大",
+          "label": "≤ 20 kg",
+          "maxKg": 20,
+          "a": 64.5
+        },
+        {
+          "size": "特超大",
+          "label": "≤ 25 kg",
+          "maxKg": 25,
+          "a": 74.5
+        },
+        {
+          "size": "特超大",
+          "label": "≤ 30 kg",
+          "maxKg": 30,
+          "a": 84.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 20 kg",
+          "maxKg": 20,
+          "a": 74.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 21 kg",
+          "maxKg": 21,
+          "a": 76.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 22 kg",
+          "maxKg": 22,
+          "a": 78.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 23 kg",
+          "maxKg": 23,
+          "a": 80.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 24 kg",
+          "maxKg": 24,
+          "a": 82.5,
+          "perKg": 2,
+          "perKgTill": 30
+        },
+        {
+          "size": "大件",
+          "label": "≤ 35 kg",
+          "maxKg": 35,
+          "a": 102.5
+        },
+        {
+          "size": "大件",
+          "label": "≤ 40 kg",
+          "maxKg": 40,
+          "a": 111.5
+        }
+      ]
+    }
+  }
+}

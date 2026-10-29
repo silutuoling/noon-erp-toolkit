@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "source_file": "noon-seller-plugin-dev/web/src/pages/toolkit/ImportDuty.tsx",
+    "official_source": {
+      "ae": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "sa": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "eg": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt"
+    },
+    "fetched_at": "2026-10-22",
+    "online_tool": "https://noonmate.com/tool/duty",
+    "disclaimer": "数据整理自 Noon 卖家帮助中心的公开服务附件，非官方发布物；以 Noon 官方页面为准。",
+    "critical_note": "默认关税税率是「标准税率示例」，真实税率随 HS 编码变动，必须可改。进口服务费是百分比（% of 货值），沙特 0.15%（2024-10-06 起替代原固定费）。",
+    "formula": "CIF 货值 → 关税 = CIF × 关税率 → 计税额 = CIF + 关税 → VAT = 计税额 × VAT 率 → 进口服务费 = CIF × 服务费率 → 落地成本 = CIF + 关税 + VAT + 服务费"
+  },
+  "default_duty_pct_note": "示例标准税率，实际按 HS 编码取值",
+  "markets": {
+    "sa": {
+      "name": "沙特",
+      "currency": "SAR",
+      "defaultDutyPct": 5,
+      "defaultVatPct": 15,
+      "defaultServicePct": 0.15,
+      "serviceLabel": "进口服务费",
+      "lookupName": "ZATCA 综合关税查询",
+      "lookupUrl": "https://zatca.gov.sa/en/eServices",
+      "extraRequirement": "受管制品类还需 Saber 平台的 PCoC / SCoC 合格证书，否则无法清关。"
+    },
+    "eg": {
+      "name": "埃及",
+      "currency": "EGP",
+      "defaultDutyPct": 5,
+      "defaultVatPct": 14,
+      "defaultServicePct": 0,
+      "serviceLabel": "其他进口费用",
+      "lookupName": "Nafeza 关税查询",
+      "lookupUrl": "https://nafeza.gov.eg/en/services/tariff-inquiry/1",
+      "extraRequirement": "埃及用 12 位编码，官方明确 6 位或 8 位替代会导致税率错误与清关延误；商业进口无最低起征点。"
+    },
+    "ae": {
+      "name": "阿联酋",
+      "currency": "AED",
+      "defaultDutyPct": 5,
+      "defaultVatPct": 5,
+      "defaultServicePct": 0,
+      "serviceLabel": "其他进口费用",
+      "lookupName": "迪拜海关 HS 编码查询",
+      "lookupUrl": "https://www.dubaicustoms.gov.ae/en/eServices/Pages/HScodesearch.aspx"
+    }
+  }
+}

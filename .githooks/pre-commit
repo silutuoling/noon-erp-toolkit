@@ -1,0 +1,128 @@
+#!/bin/sh
+# ============================================================
+# 提交前防护（第 2 层）
+#
+# 这个仓库跟主项目源码在同一个工作区里。即使 .gitignore 是白名单模式，
+# 只要有人（或某个 AI 助手）执行了 `git add -f`，被忽略的文件仍会进暂存区。
+# 这个钩子就是兜住那一手。
+#
+# 启用：git config core.hooksPath .githooks
+# 临时跳过（想清楚再用）：git commit --no-verify
+# ============================================================
+
+set -u
+
+RED=''
+BOLD=''
+if [ -t 1 ]; then
+  RED=$(printf '\033[31m')
+  BOLD=$(printf '\033[1m')
+fi
+RESET=''
+if [ -t 1 ]; then
+  RESET=$(printf '\033[0m')
+fi
+
+fail() {
+  printf '%s%s提交被拦截%s\n' "$RED" "$BOLD" "$RESET" >&2
+  printf '%s\n' "$1" >&2
+  printf '\n本次提交未发生，暂存区保持原样。\n' >&2
+  printf '确认无误要强行提交：git commit --no-verify\n' >&2
+  exit 1
+}
+
+# 取暂存区新增/修改的文件（-z 处理含空格的文件名）
+STAGED=$(
+  git diff --cached --name-only --diff-filter=ACMR -z 2>/dev/null \
+    | tr '\0' '\n' \
+    | sed '/^$/d'
+)
+
+[ -z "$STAGED" ] && exit 0
+
+# ------------------------------------------------------------
+# 第 1 道：文件名黑名单
+# ------------------------------------------------------------
+BAD_NAME=$(
+  printf '%s\n' "$STAGED" \
+    | grep -Ei '(^|/)(\.env(\..*)?|\.npmrc|\.netrc|.*\.(pem|key|p12|pfx|jks|keystore|sql|sqlite|db)|credentials?(\..*)?|id_rsa.*|id_ed25519.*)$' \
+    || true
+)
+if [ -n "$BAD_NAME" ]; then
+  fail "以下文件属于密钥/凭据/数据库文件，不允许进入这个公开仓库：
+$BAD_NAME"
+fi
+
+# ------------------------------------------------------------
+# 第 2 道：主项目目录（这些绝不能出现在工具仓库里）
+# ------------------------------------------------------------
+BAD_DIR=$(
+  printf '%s\n' "$STAGED" \
+    | grep -Ei '(^|/)(server|web|extension|extensions|docs|node_modules|dist|build|\.git-.*|_bak_[^/]*|_deleted_[^/]*)/' \
+    || true
+)
+if [ -n "$BAD_DIR" ]; then
+  fail "以下文件位于主项目目录（server/ web/ extension/ docs/ 等），不属于工具仓库：
+$BAD_DIR"
+fi
+
+# ------------------------------------------------------------
+# 第 3 道：顶层路径必须落在白名单里
+#    目录层面再收一次，防止有人 add 了一个意料之外的顶层文件
+# ------------------------------------------------------------
+ALLOWED_TOP='^(\.gitignore|\.gitattributes|LICENSE|README\.md|package\.json|package-lock\.json|src/|data/|examples/|\.githooks/)'
+BAD_TOP=$(
+  printf '%s\n' "$STAGED" | grep -Ev "$ALLOWED_TOP" || true
+)
+if [ -n "$BAD_TOP" ]; then
+  fail "以下文件不在仓库白名单范围内（只允许 src/ data/ examples/ .githooks/ 和几个根文件）：
+$BAD_TOP
+如果确实要发布，把它加进 .gitignore 白名单，并在这里同步放行。"
+fi
+
+# ------------------------------------------------------------
+# 第 4 道：内容扫描（扫真实内容，不只是文件名）
+# ------------------------------------------------------------
+SECRET_RE='-----BEGIN [A-Z ]*PRIVATE KEY-----|DATABASE_URL=|postgres(ql)?://[^[:space:]]*:[^[:space:]]*@|mysql://[^[:space:]]*:[^[:space:]]*@|AKID[A-Za-z0-9]{13,}|secret(access)?key[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9/+]{16,}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|xox[baprs]-[A-Za-z0-9-]{10,}'
+
+HITS=''
+OLDIFS=$IFS
+IFS='
+'
+for f in $STAGED; do
+  case "$f" in
+    .githooks/*) continue ;;   # 钩子自己含正则字面量，跳过
+  esac
+  [ -f "$f" ] || continue
+  case "$f" in
+    *.json|*.mjs|*.js|*.cjs|*.ts|*.md|*.txt|*.yml|*.yaml|*.sh|*.html|*.css)
+      # 🔴 必须用 -e 传 pattern：SECRET_RE 以 "-----BEGIN" 开头，
+      #    直接拼在选项后面会被 grep 当成命令行选项，静默失效（本机实测踩过）。
+      M=$(grep -EnI -e "$SECRET_RE" -- "$f" 2>/dev/null | head -n 3 || true)
+      if [ -n "$M" ]; then
+        HITS="${HITS}${f}:
+${M}
+"
+      fi
+      ;;
+  esac
+done
+IFS=$OLDIFS
+
+if [ -n "$HITS" ]; then
+  fail "以下文件的正文里疑似有密钥/连接串：
+$HITS
+如果这是测试数据里的假值（比如文档示例），改写它，别用真格式。"
+fi
+
+# ------------------------------------------------------------
+# 第 5 道：纯提示（不阻断）—— 有没有把 .env 之类的忽略文件偷偷 add -f
+# ------------------------------------------------------------
+FORCED=$(git diff --cached --name-only --diff-filter=ACMR | while IFS= read -r f; do
+  git check-ignore -q "$f" 2>/dev/null && printf '%s\n' "$f"
+done)
+if [ -n "$FORCED" ]; then
+  printf '%s注意%s：以下文件被 .gitignore 忽略，但用 -f 强制加入了：\n%s\n' "$BOLD" "$RESET" "$FORCED" >&2
+fi
+
+exit 0
