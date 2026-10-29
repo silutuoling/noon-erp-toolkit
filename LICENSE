@@ -31,13 +31,14 @@ SOFTWARE.
 ## 数据（`data/`）— CC BY 4.0
 
 本仓库 `data/` 目录下的结构化数据（费率数值、章节表等）按
-[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
-许可提供。
+Creative Commons Attribution 4.0 International（CC BY 4.0）许可提供：
+https://creativecommons.org/licenses/by/4.0/
 
-你可以自由复制、分发、修改、商用，**唯一要求是注明来源**，例如：
+你可以自由复制、分发、修改、商用，唯一要求是注明来源，例如：
 
-> 数据来源：[noon-erp-toolkit](https://github.com/silutuoling/noon-erp-toolkit)，
-> 整理自 Noon 卖家帮助中心公开服务附件。
+数据来源：noon-erp-toolkit
+https://github.com/silutuoling/noon-erp-toolkit
+整理自 Noon 卖家帮助中心公开服务附件。
 
 ### 关于原始版权
 
